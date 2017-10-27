@@ -1,0 +1,148 @@
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover, a:focus {
+	text-decoration: none;
+}
+
+p {
+	color: #182f3d;
+	font-family: 'Crimson Text', serif;
+}
+
+body {
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+h1, h2, h3, h4, h2 a {
+	font-family: 'Lato', sans-serif;
+}
+
+
+a h2:hover, a h2:focus {
+	text-decoration: none;
+	color: #fff;
+}
+
+.btn {
+	background-color: #182f3d;
+	color: #fff;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 2px solid #182f3d;
+}
+
+.btn:hover, .btn:focus {
+	background-color: #fff;
+	color: #182f3d;
+	padding: 10px;
+	border: 2px solid #182f3d;
+}
+
+.container {
+	width: 100%;
+	text-align: center;
+}
+
+#title {
+	font-size: 52px;
+	color: #182f3d;
+	font-weight: 600;
+}
+
+#sub-title {
+	color: #9b9898;
+	letter-spacing: .085em;
+	font-family: 'Crimson Text', serif;
+}
+
+#getNew {
+	margin-top: 20px;
+}
+
+.message {
+	margin-top: 20px;
+}
+
+#articles {
+	width: 80%;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.article {
+	padding-top: 3%;
+	padding-bottom: 3%;
+	padding-right: 2%;
+	height: 300px;
+	width: 100%;
+	display: block;
+	background-color: #8daec1;
+	margin-top: 40px;
+	border-radius: 5px;
+    box-shadow: 0px 6px 8px #b2b0b0;
+}
+
+#save-article {
+	margin-top: 5px;
+}
+
+.article-img {
+	width: 30%;
+	display: inline-block;
+	float: left;
+}
+
+
+.article img {
+	height: 200px;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+.article h2 a {
+	color: #fff;
+	padding-right: 30px;
+	font-size: 24px;
+}
+
+.byline {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.summary {
+	font-size: 16.5px;
+	padding-right: 30px;
+	line-height: 1.3;
+}
+
+.added-notes {
+	height: 100px;
+	overflow-y: scroll;
+	border: 2px solid #182f3d;
+	border-radius: 5px;
+	position: relative;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.delete-note-btn {
+	position: absolute;
+	right: 10px;
+}
+
+@media only screen and (max-width: 860px) {
+	.article img {
+		display: none;
+	}
+
+	.article h2, .summary, .byline {
+		padding-left: 30px;
+	}
+}

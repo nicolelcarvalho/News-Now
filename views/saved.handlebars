@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-md-12 text-center">
+
+    <i><h3>Saved Articles</h3></i>
+
+    <div id="articles">
+    {{#each savedArticles}}
+      <div data-id="{{_id}}" class="article">
+      <img class="article-img" src="{{image}}">
+      <a href="{{url}}" target="_blank"><h2> {{headline}} </h2></a>
+      <p class="byline"> {{byline}} </p>
+      <p class="summary"> {{summary}} </p>
+      <button data-id="{{_id}}" class="note btn" data-toggle="modal">Add Note</button>
+      <a href="/removearticle/{{_id}}"><button data-id="{{_id}}" id="delete" class="btn">Delete from Saved</button></a>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="noteModal" role="dialog">
+        <div class="modal-dialog">
+                    
+        <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close close-modal" data-dismiss="modal">&times;</button>
+              <h2 class="modal-title">Notes for:</h2>
+              <h4 class="modal-title"><i>{{this.headline}}</i></h4>
+              <h5>{{this.byline}}</h5>
+            </div>
+            <div class="modal-body">
+
+              <form id="form-add-{{_id}}" class="form-group">
+                <div class="all-notes"></div>
+                <label for="note">Note:</label>
+                <textarea class="note-text form-group form-control" name="userNote" rows="4"></textarea>
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button data-id="{{this._id}}" type="button" class="btn add-note">Add Note</button>
+              <i><h5 class="add-message"></h5></i>
+            </div>
+          </div>
+                  
+        </div>
+      </div>
+
+
+    {{/each}}
+    </div>
+
+  </div>
+</div>

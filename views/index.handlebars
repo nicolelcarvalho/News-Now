@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-12 text-center">
+
+    <button id="getNew" class="btn">Get New Articles</button>
+    <i><h5 class="message"></h5></i>
+
+    <div id="articles">
+    {{#each articles}}
+      <div data-id="{{_id}}" class="article">
+      <img class="article-img" src="{{image}}">
+      <a href="{{url}}" target="_blank"><h2> {{headline}} </h2></a>
+      <p class="byline"> {{byline}} </p>
+      <p class="summary"> {{summary}} </p>
+      <a href="/saved/{{_id}}"><button data-id="{{_id}}" id="save-article" class="btn">Save Article</button></a>
+      </div>
+    {{/each}}
+    </div>
+
+  </div>
+</div>
