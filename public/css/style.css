@@ -95,12 +95,12 @@ a h2:hover, a h2:focus {
 	width: 30%;
 	display: inline-block;
 	float: left;
-	margin-top: 15px;
+	margin-top: 27px;
 }
 
 
 .article img {
-	height: 230px;
+	height: 200px;
 	margin-right: 2%;
 	margin-left: 2%;
 }
