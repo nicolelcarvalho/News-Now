@@ -3,6 +3,7 @@ var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsdb";
 
 // Require all models
 var db = require("./models");
@@ -30,8 +31,10 @@ app.use(express.static("public"));
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
+// mongodb://heroku_gg00x1rn:a7dr0bshm9ds56btlshf8r1cc9@ds237815.mlab.com:37815/heroku_gg00x1rn
+
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/newsdb", {
+mongoose.connect(MONGODB_URI, {
   useMongoClient: true
 });
 
