@@ -94,7 +94,7 @@ app.get("/saved/:id", function(req, res) {
   var id = req.params.id;
   db.Article.findOneAndUpdate({_id: id}, {saved: true})
   .then(function(savedArticle) {
-    res.send("saved article");
+    res.json(savedArticle);
   }).catch(function(err) {
     res.json(err);
   })

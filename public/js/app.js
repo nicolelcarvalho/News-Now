@@ -20,18 +20,6 @@ $("#getNew").on("click", function() {
     setTimeout(function(){ $(".message").html("No new articles available."); }, 3500);
 });
 
-$("#save-article").on("click", function() {
-  var thisId = $(this).attr("data-id");
-  var baseURL = window.location.origin;
-  $.ajax({
-    method: "GET", 
-    url: baseURL + "/savedarticle/" + thisId 
-  })
-  .done(function(data) {
-    console.log(data);
-  })
-});
-
 // Allow the user to post a note into the db as well as display it in the modal along with all the other notes
 $(".add-note").on("click", function() {
   $(".add-message").hide();
