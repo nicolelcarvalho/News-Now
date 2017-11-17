@@ -20,7 +20,7 @@ An app that scrapes articles from the New York Times website (Technology section
 ![homepage](demo/homepage.png)
 
 ### Saving articles/adding notes:
-![savedarticles](demo/saved.png)
+![savedarticles](demo/saved_articles.png)
 
 ## Tech Used
 - Node.js
