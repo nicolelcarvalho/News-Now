@@ -14,12 +14,12 @@ An app that scrapes articles from the New York Times website (Technology section
 - Comments can be added on saved articles by clicking the "Add a Note" button.
 - Saved articles and notes can be deleted by clicking the "Delete" button.
 
-## Demonstrations
+## Illustrations
 
-### Retrieving new articles:
+### Home Page to Retrieve New Articles:
 ![homepage](demo/homepage.png)
 
-### Saving articles/adding notes:
+### Saved Articles Page / Add Notes to Articles:
 ![savedarticles](demo/saved_articles.png)
 
 ## Tech Used
