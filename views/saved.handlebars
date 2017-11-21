@@ -10,21 +10,21 @@
       <a href="{{url}}" target="_blank"><h2> {{headline}} </h2></a>
       <p class="byline"> {{byline}} </p>
       <p class="summary"> {{summary}} </p>
-      <button data-id="{{_id}}" class="note btn" data-toggle="modal">Add Note</button>
+      <button data-id="{{_id}}" class="note btn" data-toggle="modal" data-target="#noteModal-{{_id}}">Add Note</button>
       <a href="/removearticle/{{_id}}"><button data-id="{{_id}}" id="delete" class="btn">Delete from Saved</button></a>
       </div>
 
       <!-- Modal -->
-      <div class="modal fade" id="noteModal" role="dialog">
+      <div id="noteModal-{{_id}}" class="modal fade" role="dialog">
         <div class="modal-dialog">
                     
         <!-- Modal content-->
-          <div class="modal-content">
+          <div class="modal-content" id="{{_id}}">
             <div class="modal-header">
               <button type="button" class="close close-modal" data-dismiss="modal">&times;</button>
               <h2 class="modal-title">Notes for:</h2>
-              <h4 class="modal-title"><i>{{this.headline}}</i></h4>
-              <h5>{{this.byline}}</h5>
+              <h4 class="modal-title"><i>{{headline}}</i></h4>
+              <h5>{{byline}}</h5>
             </div>
             <div class="modal-body">
 
@@ -36,7 +36,7 @@
 
             </div>
             <div class="modal-footer">
-              <button data-id="{{this._id}}" type="button" class="btn add-note">Add Note</button>
+              <button data-id="{{_id}}" type="button" class="btn add-note">Add Note</button>
               <i><h5 class="add-message"></h5></i>
             </div>
           </div>

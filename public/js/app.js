@@ -67,6 +67,7 @@ $(".add-note").on("click", function() {
 // Populate all of the notes from the db when user clicks to add a note
 $(document).on("click", ".note", function() {
   var thisId = $(this).attr("data-id");
+  // $(this).attr("data-target", "#noteModal-" + thisId);
   console.log(thisId);
   $(".all-notes").empty();
   $("#noteModal").modal('toggle');
