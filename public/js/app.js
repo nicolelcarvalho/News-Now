@@ -67,7 +67,6 @@ $(".add-note").on("click", function() {
 // Populate all of the notes from the db when user clicks to add a note
 $(document).on("click", ".note", function() {
   var thisId = $(this).attr("data-id");
-  // $(this).attr("data-target", "#noteModal-" + thisId);
   console.log(thisId);
   $(".all-notes").empty();
   $("#noteModal").modal('toggle');
@@ -89,6 +88,20 @@ $(document).on("click", ".note", function() {
       $(".all-notes").append(noteDiv);
     }
   });
+
+
+  $.ajax({
+    method: "GET",
+    url: baseURL + "/articles/" + thisId
+  })
+  .done(function(data) {
+    console.log(data);
+    $(".modal-title").html(data.headline);
+    $(".byline").html(data.byline);
+    $(".add-note").attr("data-id", data._id);
+  });
+
+
 });
 
 // Delete a note from the db
