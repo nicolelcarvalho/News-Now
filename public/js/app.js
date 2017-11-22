@@ -97,7 +97,7 @@ $(document).on("click", ".note", function() {
   .done(function(data) {
     console.log(data);
     $(".modal-title").html(data.headline);
-    $(".byline").html(data.byline);
+    $(".modal-byline").html(data.byline);
     $(".add-note").attr("data-id", data._id);
   });
 
